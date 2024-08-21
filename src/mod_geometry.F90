@@ -739,8 +739,8 @@ subroutine gen_orth_vectors(n, m, l)
   tol = 1.0e-12
 
   m(1) = 0d0
-  m(2) = 1d0
-  m(3) = 0d0
+  m(2) = 0d0
+  m(3) = -1d0
 
   !if (abs(sqrt(n(1)**2+n(2)**2+n(3)**)-1d0) .ge. tol) stop 'input vector must be a unit vector'
 
@@ -753,8 +753,8 @@ subroutine gen_orth_vectors(n, m, l)
     call Gram_Schmidt(n, m)
   else
     m(1) = 0d0
-    m(2) = 0d0
-    m(3) = 1d0
+    m(2) = 1d0
+    m(3) = 0d0
     !diff_norm1 = dsqrt((n(1)-m(1))**2 + (n(2)-m(2))**2 + (n(3)-m(3))**2)
     !diff_norm2 = dsqrt((n(1)+m(1))**2 + (n(2)+m(2))**2 + (n(3)+m(3))**2)
     diff_norm1 = sqrt((n(1)-m(1))**2 + (n(2)-m(2))**2 + (n(3)-m(3))**2)

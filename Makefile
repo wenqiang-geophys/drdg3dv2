@@ -40,7 +40,7 @@ endif
 ifeq "$(ENV)" "mbp"
 ######################################################
 ### for MacBook Pro
-NETCDF_DIR := /usr/local
+NETCDF_DIR := /opt/homebrew/Cellar/netcdf-fortran/4.6.1
 LDFLAGS := -lblas -llapack -L $(NETCDF_DIR)/lib -lnetcdff
 #LDFLAGS := -lblas -llapack -L /usr/local/lib /usr/local/lib/libnetcdf.a /usr/local/lib/libnetcdff.a
 #LDFLAGS := -L . -llapack -lrefblas 
